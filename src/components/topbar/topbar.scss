@@ -1,0 +1,117 @@
+@import "../../Global.scss";
+
+
+.topbar{
+    width: 100%;
+    height: 70px;
+    background-color: #ddd7d7;
+    color: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
+    overflow: hidden;
+    .wrapper{
+        padding: 10px 2px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        .left{
+            display: flex;
+            align-items: center;
+          
+            
+            
+            .logo{
+                img{
+                height: 35px;
+                width: 35px;
+                margin-bottom: 5px;
+                margin-right: 15px;
+                margin-left: 8px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                }
+            }
+
+            
+                .linkedin{
+                    img{
+                    display: flex;
+                    align-items: center;
+                    height: 33px;
+                    width: 36px;
+                    margin-bottom: 10px;
+                    margin-left: 35px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                   }
+                    
+                }
+                    .github{
+                        img{
+                        display: flex;
+                        align-items: center;
+                        height: 35px;
+                        width: 35px;
+                        margin-bottom: 10px;
+                        margin-top: 8px;
+                        margin-left: 20px;
+                        cursor: pointer;  
+                        }
+                }
+            
+        }
+
+        .right{
+            overflow: hidden;
+            .hamburger{
+                width: 30px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                overflow: hidden;
+                margin-bottom: 8px;
+                margin-right: 20px;
+                span{
+                    overflow: hidden;
+                    width: 100%;
+                    height: 3px;
+                    background-color: rgb(16, 6, 51);
+                
+                    transform-origin: left;
+                    transition: all 1.2s ease;
+                }
+            }
+        }
+    }
+
+    &.active{
+       background-color: #ddd7d7;
+     //   color: white;
+    // background-image: linear-gradient(to bottom, rgb(7, 112, 182), rgb(16, 6, 51));
+        .hamburger{
+            span{
+                &:first-child{
+                    background-color: rgb(16, 6, 51);
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: rgb(16, 6, 51);
+                    transform: rotate(-45deg);
+
+                }
+            }
+        }
+    }
+}

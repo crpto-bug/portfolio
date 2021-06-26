@@ -1,0 +1,168 @@
+.animated-background{
+    left: 0;
+    top: 0;
+    position: relative;
+    background-color: #0A1931;//rgb(16, 6, 51);
+    overflow: hidden;
+    
+ .intro{
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    .left{
+        flex: 0.5;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .imgContainer{
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            float: center;
+            margin: 20px 10px 80px 80px;
+            img{
+                width: 100%;
+            }
+        }
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+          }
+          
+          @mixin visualTune($l, $shad-width, $shad-color) {
+            left: $l;
+            text-shadow: $shad-width 0 $shad-color; 
+            
+          }
+          .glitch-txt {
+            position: absolute;
+            //center
+            left: 20%;
+            top: 83%;
+            font-size: 45px;
+            transform: translate(-50%, -50%);
+            color:  white;//rgb(240, 26, 26);
+            overflow: hidden;
+            //------
+            
+            &::before {
+              content: attr(data-text);
+              position: absolute;
+              top: 0;
+              @include visualTune(-3px, 3px, red); 
+              animation: noise-1 2s infinite linear alternate;
+             
+            }   
+            
+            &::after {
+              content: attr(data-text);
+              position: absolute;
+              top: 0;
+              @include visualTune(3px, 3px, blue); 
+              animation: noise-2 2s infinite linear alternate;
+             
+            }  
+            //animation: noise-1 2s linear alternate
+          
+          }
+          
+          @keyframes noise-1 {
+            $seq-count: 20;
+            @for $i from 0 through $seq-count {
+              #{percentage($i * (1/$seq-count))} {
+                clip-path: inset(percentage(random(100)/100) 0 percentage(random(100)/100) 0);
+              }  
+            }
+          }
+          
+          @keyframes noise-2 {
+           
+            $seq-count: 20;
+            @for $i from 0 through $seq-count {
+              #{percentage($i * (1/$seq-count))} {
+                
+                clip-path: inset(percentage(random(100)/100) 0 percentage(random(100)/100) 0);
+              }  
+            }
+          }
+        }
+    }
+
+    .right{
+        flex: 0.5;
+        position: relative;
+        overflow: hidden;
+        
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 60px;
+            padding-bottom: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+          
+            h2{
+                font-size: 40px;
+                color: white;
+            }
+            h3{
+                font-size: 60px;
+
+                span{
+                    font-size: inherit;
+                    color: rgb(204, 224, 22);
+                }
+
+                .ityped-cursor {
+                    font-size: 2.2rem;
+                    opacity: 1;
+                    -webkit-animation: blink 0.5s infinite;
+                    -moz-animation: blink 0.5s infinite;
+                    animation: blink 0.5s infinite;
+                    animation-direction: alternate;
+                }
+                 
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+                 
+                @-webkit-keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+                 
+                @-moz-keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+    }
+  }
