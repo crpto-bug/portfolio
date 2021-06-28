@@ -12,7 +12,7 @@ export default function Intro() {
             showCursor: true,
             backDelay: 1000,
             backspeed: 50,
-            strings: ["PlayBoy.", "Procastinator.", "Genius.", "Gamer." ] })
+            strings: ["Competitive Programmer.", "Cloud Enthusiast.", "Machine Learning Enthusiast.", "Gamer." ] })
     },[])
 
     return (
