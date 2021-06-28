@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 { 
-=======
-{
->>>>>>> 75dbbf60f197a8c8a5c3cd15464cf9ed147978d5
+
   "homepage": "https://crpto-bug.github.io/portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
@@ -25,11 +23,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-<<<<<<< HEAD
     "deploy": "gh-pages -d build",
-=======
-    "deploy" : "gh-pages -d build",
->>>>>>> 75dbbf60f197a8c8a5c3cd15464cf9ed147978d5
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
