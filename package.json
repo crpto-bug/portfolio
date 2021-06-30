@@ -1,7 +1,5 @@
-
-{ 
-
-  "homepage": "https://crpto-bug.github.io/portfolio/",
+{
+  "homepage": ".",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
