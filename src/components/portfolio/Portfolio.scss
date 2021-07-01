@@ -2,13 +2,21 @@
 
 .Portfolio{
 
-    background-color: white;
+   // background-color: white;
+   background: #1c92d2;  
+background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  
+background: linear-gradient(to right, #f2fcfe, #1c92d2); 
+
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
     h1{
         font-size: 50px;
+        margin-top: 50px;
+        @include mobile{
+            font-size: 25px;
+          }
     }
 
     ul{
@@ -16,6 +24,12 @@
         padding: 0;
         list-style: none;
         display: flex;
+        @include mobile{
+            font-size: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+          }
     }
     .container{
         width: 70%;
@@ -23,7 +37,9 @@
         align-items: center;
         justify-content: center; 
         flex-wrap: wrap;
-       
+        @include mobile{
+            width: 100%;
+          }
 
         .item{
             width: 220px;
@@ -38,6 +54,10 @@
             position: relative;
             transition: all 0.5s ease;
             cursor: pointer;
+            @include mobile{
+                width: 130px;
+                height: 100px;
+              }
 
             h3{
                 position: absolute;

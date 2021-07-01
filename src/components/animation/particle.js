@@ -2,14 +2,14 @@
 const parti = {
     particles: {
       number: {
-        value: 100,
+        value: 40,
         density: {
           enable: true,
           value_area: 630.3480069132609
         }
       },
       color: {
-        value: "#989119"
+        value: "#ffffff"
       },
       shape: {
         type: "circle",
@@ -37,11 +37,11 @@ const parti = {
         }
       },
       size: {
-        value: 3,
+        value: 2,
         random: true,
         anim: {
           enable: false,
-          speed: 24,
+          speed: 20,
           size_min: 0.1,
           sync: false
         }
@@ -73,11 +73,11 @@ const parti = {
       events: {
         onhover: {
           enable: true,
-          mode: "repulse"
+          mode: "grab"
         },
         onclick: {
           enable: true,
-          mode: "push"
+          mode: "repulse"
         },
         resize: true
       },

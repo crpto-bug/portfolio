@@ -1,3 +1,5 @@
+@import "../../Global.scss";
+
 .animated-background{
     left: 0;
     top: 0;
@@ -13,6 +15,10 @@
     left: 0;
     top: 0;
     bottom: 0;
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+    }
     .left{
         flex: 0.5;
         overflow: hidden;
@@ -29,8 +35,20 @@
             justify-content: center;
             float: center;
             margin: 20px 10px 80px 80px;
+
+            @include mobile{
+              align-items: flex-start;
+              border-radius: 0;
+            }
             img{
+            
                 width: 100%;
+                @include mobile{           
+                  width: 200px;
+                  align-items: center;
+                  margin-right: 60px;
+                }
+                
             }
         }
         *, *::before, *::after {
@@ -55,7 +73,14 @@
             color:  white;//rgb(240, 26, 26);
             overflow: hidden;
             //------
-            
+            @include mobile{
+              flex-direction: column;
+             align-items: center;
+              margin-left: 80px;
+              margin-top: 100px;
+              font-size: 30px;
+              padding-right: 0;
+            }
             &::before {
               content: attr(data-text);
               position: absolute;
@@ -74,7 +99,7 @@
              
             }  
             //animation: noise-1 2s linear alternate
-          
+            
           }
           
           @keyframes noise-1 {
@@ -112,22 +137,40 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-
+            @include mobile{
+              padding-left: 15px;
+              align-items: center;
+            }
           
             h2{
-                font-size: 40px;
+                font-size: 30px;
                 color: white;
+                margin-bottom: 10px;
+                @include mobile{
+                  font-size: 25px;
+                }
             }
+            h1{
+              font-size: 25px;
+              color: white;
+              margin-bottom: 10px;
+              @include mobile{
+                font-size: 25px;
+              }
+            }
+            
             h3{
-                font-size: 60px;
-
+                font-size: 40px;
+                @include mobile{
+                  font-size: 25px;
+                }
                 span{
                     font-size: inherit;
-                    color: rgb(204, 224, 22);
+                    color: #FFC947;
                 }
 
                 .ityped-cursor {
-                    font-size: 2.2rem;
+                    font-size: 2.8rem;
                     opacity: 1;
                     -webkit-animation: blink 0.5s infinite;
                     -moz-animation: blink 0.5s infinite;
